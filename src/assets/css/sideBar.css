@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: darkgreen;
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding-inline-start: 0px;
+}
+.marcador{
+    border: 1px solid red;
+}
+.main-container{
+    display: flex;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    
+}
+.sidebar{
+    
+    background-color: #e5890a;
+    min-width: 200px;
+    list-style: none;
+}
+.sidebar li{
+    padding: 0px 10px;
+    margin: 0px 10px;
+}

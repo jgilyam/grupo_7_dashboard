@@ -1,35 +1,41 @@
+import React from "react";
+import "../assets/css/sideBar.css";
 import { Link, Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
+import ContentRow from "./ContentRow";
 
 function SideBar() {
   return (
-    <div>
-      <nav>
+    <div className="main-container">
+      <nav className="sidebar">
         <ul>
           <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <Link className="nav-link" to="/ContentRow">
+              Dashboard
+            </Link>
+          </li>
+
+          <hr className="sidebar-divider" />
+
+          <li className="nav-item">
+            <Link className="nav-link" to="/asd">
               Link
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="#">
               Link
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="#">
               Link
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
       <Routes>
-        <Route path="/" exact={true} element={<ContentWrapper />} />
+        <Route path="/ContentRow" element={<ContentRow />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
