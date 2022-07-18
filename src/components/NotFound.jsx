@@ -6,7 +6,7 @@ function NotFound() {
 
       {/*<!-- Main Content -->*/}
       <div id="content">
-        <p>404sssssssssss</p>
+        <p>Error 404 contenido no encontrado</p>
       </div>
     </React.Fragment>
   );
