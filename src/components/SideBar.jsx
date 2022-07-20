@@ -3,6 +3,7 @@ import "../assets/css/sideBar.css";
 import { Link, Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import ContentRow from "./ContentRow";
+import TypesInDb from "./TypesInDb";
 
 function SideBar() {
   return (
@@ -18,8 +19,8 @@ function SideBar() {
           <hr className="sidebar-divider" />
 
           <li className="nav-item">
-            <Link className="nav-link" to="/asd">
-              Link
+            <Link className="nav-link" to="/TypesInDb">
+              Types
             </Link>
           </li>
           <li className="nav-item">
@@ -37,6 +38,7 @@ function SideBar() {
       <Routes>
         <Route path="/ContentRow" element={<ContentRow />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/TypesInDb" element={<TypesInDb />}></Route>
       </Routes>
     </div>
   );
