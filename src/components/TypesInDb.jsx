@@ -42,7 +42,7 @@ function TypesInDb(){
             {/*  <div className="card-body fondoCaja"> solucion sin estado*/}
             <div
             >
-              <div className="row">
+              <div className="container-row">
                 {listadoTypes.map((types, index) => {
                   return <TypesProduct {...types} key={index} />;
                 })}
