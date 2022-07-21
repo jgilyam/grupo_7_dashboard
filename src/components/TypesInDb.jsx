@@ -30,8 +30,8 @@ function TypesInDb(){
     return (
       <React.Fragment>
         {/*<!-- Categories in DB -->*/}
-        <div className="col-lg-6 mb-4">
-          <div className="card shadow mb-4">
+        <div className="padre-containerTypeInDb">
+          <div className="containerTypeInDb">
             <div className="card-header py-3">
               <h6
                 /* onMouseOver={this.cambiarFondo} */ /* SOLUCION SIN ESTADO */

@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/sideBar.css";
+import "../assets/css/reset.css"
 import { Link, Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import ContentRow from "./ContentRow";
@@ -9,9 +10,9 @@ function SideBar() {
   return (
     <div className="main-container">
       <nav className="sidebar">
-        <ul>
+        <ul className="ul">
           <li className="nav-item">
-            <Link className="nav-link" to="/ContentRow">
+            <Link className="nav-link" to="/">
               Dashboard
             </Link>
           </li>
@@ -19,18 +20,23 @@ function SideBar() {
           <hr className="sidebar-divider" />
 
           <li className="nav-item">
-            <Link className="nav-link" to="/TypesInDb">
-              Types
+            <Link className="nav-link" to="/ContentRow">
+              Productos 
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="#">
-              Link
+              Ultimos Productos
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="TypesInDb">
+            Categoria Productos
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="#">
-              Link
+            Crear Producto
             </Link>
           </li>
         </ul>

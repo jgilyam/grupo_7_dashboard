@@ -1,0 +1,8 @@
+.padre-containerTypeInDb{
+    display: flex;
+    width:50%
+}
+.containerTypeInDb{
+    background-color: aquamarine;
+    padding: 30px;
+}

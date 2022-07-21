@@ -1,19 +1,23 @@
 * {
     box-sizing: border-box;
+
   }
 a{
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: white;
+    padding:15px
 }
 a:hover{
     color: darkgreen;
 }
-ul {
+.ul {
     list-style: none;
     margin: 0px;
     padding-inline-start: 0px;
+    padding-top: 30px;
 }
+
 .marcador{
     border: 1px solid red;
 }
@@ -30,7 +34,26 @@ ul {
     min-width: 200px;
     list-style: none;
 }
-.sidebar li{
-    padding: 0px 10px;
+
+.sidebar li {
     margin: 0px 10px;
+    font-size: 17px;
+text-decoration: none;
+color: #FFFFFF;
+transition: all 300ms ease;
+padding: 15px 23px;
 }
+
+.sidebar li:hover{
+    transform: scale(1.1);
+    background-color: #ff9500;
+    box-shadow: 5px 5px 10px 0px rgb(0 0 0 / 50%);
+    color:white;
+    cursor: pointer;
+}
+
+
+.sidebar li a:hover{
+    color: rgb(229, 223, 223);
+}
+
