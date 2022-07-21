@@ -1,21 +1,31 @@
 
 import React, { useState ,useEffect} from "react";
 import TypesProduct from "./Types";
+import "../assets/css/typesInDb.css"
   
 function TypesInDb(){
 
     const [listadoTypes,setListadoTypes]= useState ([]);
 
     useEffect(() => {
+        /* getTypes() */
         console.log("montoComponente")
-    const endpoint = "/api/types";
-    fetch(endpoint)
-      .then((response) => response.json())
-      .then(types => {
-       setListadoTypes(types.data);
-      })
-      .catch((error) => console.log(error));
+        const endpoint = "http://localhost:4000/api/types";
+        fetch(endpoint)
+          .then((response) => response.json())
+          .then(types => {
+           setListadoTypes(types.data);
+          })
+          .catch((error) => console.log(error));
     },[])
+    
+    /* const getTypes = async ()=>{
+        const endpoint = "http://localhost:4000/api/types";
+        const response = await fetch(endpoint)
+        const {data} = await response.json()
+        setListadoTypes(data)
+    } */
+
 
     return (
       <React.Fragment>
