@@ -26,12 +26,12 @@ function SideBar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="#">
-              Ultimos Productos
+              Ultimo Producto
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="TypesInDb">
-            Categoria Productos
+            Categorias Productos
             </Link>
           </li>
           <li className="nav-item">
