@@ -61,3 +61,11 @@
 .text-gray-800 {
     color: #5a5c69!important;
 }
+.col-auto{
+    margin-bottom: 30px;
+    margin-left: 7px;
+}
+.contenedor{
+    margin-right: 35px;
+    margin-top: 7px;
+}

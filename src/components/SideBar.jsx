@@ -21,7 +21,7 @@ function SideBar() {
 
           <li className="nav-item">
             <Link className="nav-link" to="/ContentRow">
-              Productos 
+              Datos Totales
             </Link>
           </li>
           <li className="nav-item">

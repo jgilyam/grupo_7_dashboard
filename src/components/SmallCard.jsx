@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "../assets/css/smallCard.css"
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
-/>
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function SmallCard(props){
     return(
@@ -18,10 +12,13 @@ function SmallCard(props){
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                             <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}> {props.title}</div>
+                            <div className='contenedor'>
                             <div className="h5 mb-0 font-weight-bold text-gray-800">{props.cuantity}</div>
+                            </div>
                         </div>
                         <div className="col-auto">
-                            <i className={`fas ${props.icon} fa-2x text-gray-300`}></i>
+                         <i className={`fas ${props.icon} fa-2x text-gray-300`}></i> 
+                            <FontAwesomeIcon icon={props.icon} />
                         </div>
                     </div>
                 </div>
