@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SmallCard from './SmallCard';
 import "../assets/css/smallCard.css"
 
-import { faList, faUsers,  } from '@fortawesome/free-solid-svg-icons'
-
-
+import { faList, faUsers, faArrowDownWideShort } from '@fortawesome/free-solid-svg-icons'
 
 /* <!-- Total de Productos --> */
 
@@ -31,7 +29,7 @@ let totalT = {
     title:'TOTAL DE CATEGORIAS' ,
     color:'warning',
     cuantity:'',
-    icon: faList
+    icon: faArrowDownWideShort
 }
 
 let cartProps = [totalP, totalU, totalT];
