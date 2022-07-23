@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/sideBar.css";
-import "../assets/css/reset.css"
+import "../assets/css/reset.css";
 import { Link, Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import ContentRow from "./ContentRow";
@@ -31,13 +31,16 @@ function SideBar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="TypesInDb">
-            Categorias Productos
+              Categorias Productos
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="#">
-            Crear Producto
-            </Link>
+            <a
+              className="nav-link"
+              href="http://localhost:4000/producto/create"
+            >
+              Crear Producto
+            </a>
           </li>
         </ul>
       </nav>
