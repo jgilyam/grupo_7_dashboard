@@ -5,6 +5,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import ContentRow from "./ContentRow";
 import TypesInDb from "./TypesInDb";
+import LastProductCreated from "./LastProductCreated";
 
 function SideBar() {
   return (
@@ -25,7 +26,7 @@ function SideBar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="#">
+            <Link className="nav-link" to="/LastProductCreated">
               Ultimo Producto
             </Link>
           </li>
@@ -48,6 +49,7 @@ function SideBar() {
         <Route path="/ContentRow" element={<ContentRow />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/TypesInDb" element={<TypesInDb />}></Route>
+        <Route path="/LastProductCreated" element={<LastProductCreated />}></Route>
       </Routes>
     </div>
   );
