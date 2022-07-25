@@ -4,7 +4,7 @@ import ProductsTotals from "./ProductsTotals";
 function Products() {
   const [productsOrder, setProductsOrder] = useState([]);
   useEffect(() => {
-    const endpoint = "http://localhost:4000/api/products";
+    const endpoint = "http://localhost:4000/api/products/?page=0&size=100";
     fetch(endpoint)
       .then((response) => response.json())
       .then((ram) => {
@@ -15,7 +15,7 @@ function Products() {
   }, []);
 
   return (
-    <div >
+    <div>
       {productsOrder.map((product, i) => {
         return (
           <ProductsTotals
