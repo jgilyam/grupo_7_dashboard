@@ -1,0 +1,33 @@
+import React, { useState, useEffect } from "react";
+import ProductsTotals from "./ProductsTotals";
+
+function Products() {
+  const [productsOrder, setProductsOrder] = useState([]);
+  useEffect(() => {
+    const endpoint = "http://localhost:4000/api/products";
+    fetch(endpoint)
+      .then((response) => response.json())
+      .then((ram) => {
+        console.log(ram[0].data.productos);
+        setProductsOrder(ram[0].data.productos);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  return (
+    <div >
+      {productsOrder.map((product, i) => {
+        return (
+          <ProductsTotals
+            key={product.id}
+            name={product.name}
+            description={product.description}
+            id={product.id}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+export default Products;

@@ -3,6 +3,7 @@ import "../assets/css/sideBar.css";
 import "../assets/css/reset.css";
 import { Link, Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
+import Products from "./Products";
 import ContentRow from "./ContentRow";
 import TypesInDb from "./TypesInDb";
 import LastProductCreated from "./LastProductCreated";
@@ -31,6 +32,11 @@ function SideBar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/Products" > 
+            Productos
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="TypesInDb">
               Categorias Productos
             </Link>
@@ -47,6 +53,7 @@ function SideBar() {
       </nav>
       <Routes>
         <Route path="/ContentRow" element={<ContentRow />} />
+        <Route path="/Products" element={<Products/>}/>
         <Route path="*" element={<NotFound />} />
         <Route path="/TypesInDb" element={<TypesInDb />}></Route>
         <Route path="/LastProductCreated" element={<LastProductCreated />}></Route>
