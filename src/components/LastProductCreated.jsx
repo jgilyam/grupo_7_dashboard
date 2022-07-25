@@ -38,9 +38,9 @@ function LastProductCreated() {
           
           <ul>
             <li><p>Descripción: {detailProducto.description}</p></li>
-            <li><p>Categoria: {detailProducto.category}</p></li>
+            <li><p>Categoria: {detailProducto.relation.category[0].name}</p></li>
             <li><p>Stock: {detailProducto.stock}</p></li>
-            <li><p>Tipo: {detailProducto.type}</p></li>
+            <li><p>Tipo: {detailProducto.relation.type[0].name}</p></li>
             <li><p>Precio:$ {detailProducto.price}</p></li>
             <li><p>Descuento: {detailProducto.discount}%</p></li>
           </ul>
