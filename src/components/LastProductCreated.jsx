@@ -13,7 +13,7 @@ function LastProductCreated() {
     fetch(endpointProduct)
       .then((response) => response.json())
       .then((data) =>
-        setProducto(data[0].productos[data[0].productos.length - 1])
+        setProducto(data[0].data.productos[data[0].data.productos.length - 1])
       );
   }, []);
 
@@ -33,14 +33,17 @@ function LastProductCreated() {
         </div>
 
         <img src={detailProducto.imagen} alt="lastProduct" />
-
+        
         <div className="description">
-          <p>Descripción:{detailProducto.description}</p>
-          <p>Categoria: {detailProducto.category}</p>
-          <p>Stock: {detailProducto.stock}</p>
-          <p>Tipo: {detailProducto.type}</p>
-          <p>Precio:$ {detailProducto.price}</p>
-          <p>Descuento: {detailProducto.discount}%</p>
+          
+          <ul>
+            <li><p>Descripción: {detailProducto.description}</p></li>
+            <li><p>Categoria: {detailProducto.category}</p></li>
+            <li><p>Stock: {detailProducto.stock}</p></li>
+            <li><p>Tipo: {detailProducto.type}</p></li>
+            <li><p>Precio:$ {detailProducto.price}</p></li>
+            <li><p>Descuento: {detailProducto.discount}%</p></li>
+          </ul>
         </div>
         {/* <a className="button" href="/">
           View product detail
