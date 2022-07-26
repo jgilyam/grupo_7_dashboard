@@ -41,14 +41,18 @@ function LastProductCreated() {
               <p className="ContainerDetalleApi">Descripción: </p>
               <p className="detalleApi">{detailProducto.description}</p>
             </li>
-           {/*  <li>
-              <p></p>
-            </li> */}
+            <li>
+              <p className="ContainerDetalleApi">Categoria:  </p>
+              <p className="detalleApi">{detailProducto.category}</p>
+            </li>
             <li>
               <p className="ContainerDetalleApi">Stock:  </p>
               <p className="detalleApi">{detailProducto.stock} Uni.</p>
             </li>
-            {/* <li></li> */}
+            <li>
+              <p className="ContainerDetalleApi">Tipo:  </p>
+              <p className="detalleApi">{detailProducto.type}</p>
+            </li>
             <li>
               <p className="ContainerDetalleApi">Precio: </p><p className="detalleApi">${detailProducto.price}</p>
             </li>
