@@ -11,9 +11,9 @@ function ProductsTotals(props) {
           <p className="description">{props.description}</p>
           <p className="id">{props.id}</p>
         </div>
-        <button className="css-button-arrow--sky">
-          <a href={`http://localhost:4000/producto/edit/${props.id}`}>Edit</a>
-        </button>
+        <a href={`http://localhost:4000/producto/edit/${props.id}`}>
+          <button className="css-button-arrow--sky">Edit</button>
+        </a>
       </article>
     </div>
   );
