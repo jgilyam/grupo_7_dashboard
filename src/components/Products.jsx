@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductsTotals from "./ProductsTotals";
-import "../assets/css/productsTotals.css"
+import "../assets/css/productsTotals.css";
 
 function Products() {
   const [productsOrder, setProductsOrder] = useState([]);
@@ -9,26 +9,27 @@ function Products() {
     fetch(endpoint)
       .then((response) => response.json())
       .then((ram) => {
+       
         
         setProductsOrder(ram[0].data.productos);
       })
       .catch((error) => console.log(error));
   }, []);
 
-
+ 
 
   return (
     <div className="divPadre">
       {productsOrder.map((product, i) => {
         return (
-            
           <ProductsTotals
+
             key={product.id}
+            image={product.image}
             name={product.name}
             description={product.description}
             id={product.id}
           />
-          
         );
       })}
     </div>

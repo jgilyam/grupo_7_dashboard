@@ -5,7 +5,7 @@ function ProductsTotals(props) {
   return (
     <div className="a">
       <article className="b">
-        <img src="lopez" alt="fotico" className="imgg" />
+        <img src={props.image} alt="fotico" className="imgg" />
         <div className="c">
           <h1 className="name">{props.name}</h1>
           <p className="description">{props.description}</p>
