@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
+import "../assets/css/productsTotals.css"
 
-export const ProductsTotals = (props) => {
+function ProductsTotals(props) {
   return (
-    <div>
-        <h1>{props.name}</h1>
-        <h2>{props.description}</h2>
-        <h3>{props.id}</h3>
+    <div className="a">
+      <article className="b">
+        <img src="lopez" alt="fotico" className="imgg" />
+        <div className="c">
+          <h1 className="name">{props.name}</h1>
+          <p className="description">{props.description}</p>
+          <p className="id">{props.id}</p>
+        </div>
+      </article>
     </div>
-  )
-}
+  );
+};
 
-export default ProductsTotals
+export default ProductsTotals;
