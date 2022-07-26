@@ -9,21 +9,16 @@ function Products() {
     fetch(endpoint)
       .then((response) => response.json())
       .then((ram) => {
-       
-        
         setProductsOrder(ram[0].data.productos);
       })
       .catch((error) => console.log(error));
   }, []);
-
- 
 
   return (
     <div className="divPadre">
       {productsOrder.map((product, i) => {
         return (
           <ProductsTotals
-
             key={product.id}
             image={product.image}
             name={product.name}
