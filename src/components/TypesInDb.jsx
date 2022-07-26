@@ -17,17 +17,30 @@ function TypesInDb(){
         fetch(endpoint)
           .then((response) => response.json())
           .then(types => {
-           setListadoTypes(types.data);
+           setListadoTypes(types.data)
+           console.log("jojojo", setListadoTypes);
+           console.log("jojo22 ",types.data)
           })
           .catch((error) => console.log(error));
     },[])
+
+    /* const error = console.log("esto es el listadoooo" ,listadoTypes) */
+    const [totalType, setTotaltype] = useState([]);
+  useEffect(() => {
+    const endpoint = "http://localhost:4000/api/products";
+    fetch(endpoint)
+      .then((response) => response.json())
+      .then((ram) => {
+        setTotaltype([ram[0].data.countByCategory]);
+        console.log("lallalalalal ",setTotaltype);
+        console.log("lalala22 ,",[ram[0].data.countByCategory])
+       
+      })
+      .catch((error) => console.log(error));
+  }, []);
+     console.log("mostrame 1,",listadoTypes)
+    console.log("mostrame 2,",totalType[0])
     
-    /* const getTypes = async ()=>{
-        const endpoint = "http://localhost:4000/api/types";
-        const response = await fetch(endpoint)
-        const {data} = await response.json()
-        setListadoTypes(data)
-    } */
 
 
     return (
@@ -43,13 +56,15 @@ function TypesInDb(){
               </h6> 
             </div>
             {/*  <div className="card-body fondoCaja"> solucion sin estado*/}
-            <div
-            >
+            <div>
               <div className="container-row">
                 {listadoTypes.map((types, index) => {
                   return <TypesProduct {...types} key={index} />;
                 })}
               </div>
+              {/* <div>{totalType[0].map((x, index) => {
+                  return <TypesProduct {...x} key={index} />;
+                })}</div> */}
             </div>
           </div>
         </div>
