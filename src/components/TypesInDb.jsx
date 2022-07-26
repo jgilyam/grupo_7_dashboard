@@ -8,42 +8,19 @@ import "../assets/css/typesInDb.css";
   
 function TypesInDb(){
 
-    const [listadoTypes,setListadoTypes]= useState ([]);
-
-    useEffect(() => {
-        /* getTypes() */
-        console.log("montoComponente")
-        const endpoint = "http://localhost:4000/api/types";
-        fetch(endpoint)
-          .then((response) => response.json())
-          .then(types => {
-           setListadoTypes(types.data)
-           console.log("jojojo", setListadoTypes);
-           console.log("jojo22 ",types.data)
-          })
-          .catch((error) => console.log(error));
-    },[])
-
-    /* const error = console.log("esto es el listadoooo" ,listadoTypes) */
     const [totalType, setTotaltype] = useState([]);
   useEffect(() => {
     const endpoint = "http://localhost:4000/api/products";
     fetch(endpoint)
       .then((response) => response.json())
       .then((ram) => {
-        setTotaltype([ram[0].data.countByCategory]);
-        console.log("lallalalalal ",setTotaltype);
-        console.log("lalala22 ,",[ram[0].data.countByCategory])
-       
+        setTotaltype(ram[0].data.countByCategory);
       })
       .catch((error) => console.log(error));
   }, []);
-     console.log("mostrame 1,",listadoTypes)
-    console.log("mostrame 2,",totalType[0])
-    
 
 
-    return (
+        return (
       <React.Fragment>
         {/*<!-- Categories in DB -->*/}
         <div className="padre-containerTypeInDb">
@@ -58,13 +35,10 @@ function TypesInDb(){
             {/*  <div className="card-body fondoCaja"> solucion sin estado*/}
             <div>
               <div className="container-row">
-                {listadoTypes.map((types, index) => {
+                {totalType.map((types, index) => {
                   return <TypesProduct {...types} key={index} />;
                 })}
               </div>
-              {/* <div>{totalType[0].map((x, index) => {
-                  return <TypesProduct {...x} key={index} />;
-                })}</div> */}
             </div>
           </div>
         </div>
@@ -74,3 +48,21 @@ function TypesInDb(){
 
 
 export default TypesInDb
+
+
+
+//----------------------------------------------------------------
+ /*  const [listadoTypes,setListadoTypes]= useState ([]);
+
+    useEffect(() => {
+        
+        console.log("montoComponente")
+        const endpoint = "http://localhost:4000/api/types";
+        fetch(endpoint)
+          .then((response) => response.json())
+          .then(types => {
+           setListadoTypes(types.data)
+          })
+          .catch((error) => console.log(error));
+    },[])
+ */

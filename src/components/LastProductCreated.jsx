@@ -32,9 +32,9 @@ function LastProductCreated() {
           <h3>Ultimo producto creado:</h3>
           <h4>{detailProducto.name}</h4>
         </div>
-
-        <img src={detailProducto.imagen} alt="lastProduct" />
-
+        <div className="box-img">
+        <img className="img" src={detailProducto.imagen} alt="lastProduct" />
+        </div>
         <div className="description">
           <ul>
             <li>
@@ -46,11 +46,11 @@ function LastProductCreated() {
             </li> */}
             <li>
               <p className="ContainerDetalleApi">Stock:  </p>
-              <p className="detalleApi">{detailProducto.stock}</p>
+              <p className="detalleApi">{detailProducto.stock} Uni.</p>
             </li>
             {/* <li></li> */}
             <li>
-              <p className="ContainerDetalleApi">Precio:$ </p><p className="detalleApi">{detailProducto.price}</p>
+              <p className="ContainerDetalleApi">Precio: </p><p className="detalleApi">${detailProducto.price}</p>
             </li>
             <li>
               <p className="ContainerDetalleApi">Descuento:</p><p className="detalleApi">{detailProducto.discount} %</p>

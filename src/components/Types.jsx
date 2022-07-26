@@ -5,9 +5,8 @@ function TypesProduct(props) {
     <React.Fragment>
       <div className="row-hijo">
         <div className="card text-white bg-dark  shadow">
-          <div className="card-row">{props.name}</div>
-           {/*  if({props.name} == {props.nameCategory}){ */}
-          {/* <div className="card-row">{props.cantidad}</div> */}
+          <div className="card-row-1">{props.nameCategory}</div>
+          <div className="card-row">Cantidad: {props.cantidad}</div>
         </div>
       </div>
     </React.Fragment>

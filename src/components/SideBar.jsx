@@ -7,6 +7,7 @@ import Products from "./Products";
 import ContentRow from "./ContentRow";
 import TypesInDb from "./TypesInDb";
 import LastProductCreated from "./LastProductCreated";
+import Dashboard from "./Dashboard";
 
 function SideBar() {
   return (
@@ -57,6 +58,7 @@ function SideBar() {
         <Route path="*" element={<NotFound />} />
         <Route path="/TypesInDb" element={<TypesInDb />}></Route>
         <Route path="/LastProductCreated" element={<LastProductCreated />}></Route>
+        <Route path="/" element={<Dashboard />}></Route>
       </Routes>
     </div>
   );

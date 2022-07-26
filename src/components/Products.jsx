@@ -15,7 +15,7 @@ function Products() {
   }, []);
 
   return (
-    <div className="divPadre">
+    <div className="divPadre divDashboard">
       {productsOrder.map((product, i) => {
         return (
           <ProductsTotals
