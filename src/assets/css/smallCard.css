@@ -1,8 +1,18 @@
-.row {
-    display: flex;
+.row1 {
+    /* display: flex;
     flex-wrap: wrap;
     margin-right: -0.75rem;
-    margin-left: -0.75rem;
+    margin-left: -0.75rem; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    margin-top: 100px;
+    
+}
+
+.no-gutters{
+    display: flex;
 }
 
 .card-body {
@@ -10,7 +20,9 @@
     padding: 1.25rem;
     
 }
-
+.mb-4{
+    width: 300px;
+}
 .card {
     position: relative;
     display: flex;
@@ -68,3 +80,4 @@
     font-size: 1.15rem;
     margin-top: 7px;
 }
+

@@ -78,7 +78,7 @@ function ContentRow() {
   totalT.cuantity = totalTypes;
 
   return (
-    <div className="row">
+    <div className="row1">
       {cartProps.map((product, i) => {
         return <SmallCard {...product} key={i} />;
       })}

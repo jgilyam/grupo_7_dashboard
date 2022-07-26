@@ -4,8 +4,8 @@
 
 .box-father{
    /*  margin: 5px; */
-    box-shadow: 0px 0px 5px rgb(100, 100, 100);
-    background-color: rgb(247, 240, 240);
+   box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+   /*  background-color: rgb(247, 240, 240); */
 /*     border-radius: 5px; */
     width: 100%;
     display: flex;
@@ -21,16 +21,22 @@
     align-items: center;
 }
 .description ul li{
+    display: flex;
+    width: 100%;
     padding: 10px;
     background-color: rgb(249 245 245);
-    border-bottom: 1px solid #aa9c83;
-    border-top: 1px solid #aa9c83;
+    /* border-bottom: 1px solid #aa9c83;
+    border-top: 1px solid #aa9c83; */
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    color: rgb(12 10 10);
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .box-title {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #aa9c83;
+    /* border-bottom: 1px solid #aa9c83; */
     height: 5rem;
     justify-content: center;
     align-items: center;
@@ -38,6 +44,7 @@
     display: flex;
     padding: 5px;
     background-color: rgb(249 245 245);
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)
 
 }
 .box-title h3{
@@ -53,6 +60,13 @@ img{
     min-width: 160px;
 }
 
+.ContainerDetalleApi{    
+    display: flex;
+    width: 50%;}
+.detalleApi{
+    width: 70%;
+    
+}
 /* .button{
     background-color: rgb(221, 145, 5);
     color: #FFFFFF;
@@ -69,6 +83,7 @@ a:hover{
     color:white;
     cursor: pointer;
 } */
+
 @media (min-width: 768px) {
     img{
         width: 50%;
@@ -78,9 +93,11 @@ a:hover{
         display: inline;
     }
     .box-father{
+        display: flex;
+        width: 50%;
+        align-items: center;
         margin: auto;
-        height: 95vh;
-        width: 60%;
+        margin-top: 100px;
     }
     .element{
         width:100%

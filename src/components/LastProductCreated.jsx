@@ -38,20 +38,22 @@ function LastProductCreated() {
         <div className="description">
           <ul>
             <li>
-              <p>Descripción: {detailProducto.description}</p>
+              <p className="ContainerDetalleApi">Descripción: </p>
+              <p className="detalleApi">{detailProducto.description}</p>
             </li>
-            <li>
+           {/*  <li>
               <p></p>
+            </li> */}
+            <li>
+              <p className="ContainerDetalleApi">Stock:  </p>
+              <p className="detalleApi">{detailProducto.stock}</p>
+            </li>
+            {/* <li></li> */}
+            <li>
+              <p className="ContainerDetalleApi">Precio:$ </p><p className="detalleApi">{detailProducto.price}</p>
             </li>
             <li>
-              <p>Stock: {detailProducto.stock}</p>
-            </li>
-            <li></li>
-            <li>
-              <p>Precio:$ {detailProducto.price}</p>
-            </li>
-            <li>
-              <p>Descuento: {detailProducto.discount}%</p>
+              <p className="ContainerDetalleApi">Descuento:</p><p className="detalleApi">{detailProducto.discount} %</p>
             </li>
           </ul>
         </div>

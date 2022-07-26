@@ -5,15 +5,18 @@
   }
   .divPadre{
     display: flex;
-    width: 80%;
+    width: 60%;
     flex-wrap: wrap;
-    padding: 50px;
     justify-content: space-evenly;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 30px;
   }
 
   .a{width: 30%;
     margin-bottom: 7px;
-    border: dashed 2px black;
+    /* border: dashed 2px black; */
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
 }
 
   .b{
@@ -51,8 +54,10 @@
   .description{
     width: 100%;
     font-size: 14px;
-    font-weight: 550;
-  }
+    /* font-weight: 550; */
+    color:#7a7979;
+}
+
 
   .id{
     position: absolute;
