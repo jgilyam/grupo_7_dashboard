@@ -16,4 +16,12 @@
 }
 .contentProduct{
     display: flex;
+    width: 100vw;
+    margin-left: -100px;
+}
+
+#contentDashboard{
+    height:100vh;
+    overflow:scroll;
+    scrollbar-width: none;
 }

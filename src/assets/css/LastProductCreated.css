@@ -90,6 +90,7 @@ a:hover{
     cursor: pointer;
 } */
 
+
 @media (min-width: 768px) {
     .img{
         width: 50%;
@@ -103,16 +104,17 @@ a:hover{
     width: 100%;
     align-items: center;
     margin: auto;
-    margin-top: 100px;
     padding: 30px;
-    /* padding-bottom: 155px; */
+    justify-content: center;
+    
+    /* padding-bottom: 155px;  */
     }
     .box-img{
         display: flex;
         justify-content: center;
     }
     .element{
-        width:100%
+        width:80%;
     }
     .description{
         width: 100%;

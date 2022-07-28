@@ -33,10 +33,10 @@ a:hover{
 .sidebar{
     
     background-color: #e5890a;
-    min-width: 200px;
+    max-width: 20px;
     list-style: none;
     align-items: center;
-    padding-top: 100px;
+    height: 100vh;
 }
 
 .sidebar li {
